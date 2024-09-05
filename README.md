@@ -24,17 +24,31 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Course assignment challenge
 
-To learn more about Next.js, take a look at the following resources:
+Develop simple Web application, in any language of your choosing, which manages "Course" records:
+- The application should manage the following information about a Course: id, subject, courseNumber, description. All fields other than id are strings
+- There should be a simple UI/UX to add/remove courses, search courses, and show list of current courses. This does not have to be fancy as we are not looking for a UI Designer.
+- The application should store data in an external database or another data storage system.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Features:
+- The application should allow user to search for a course by description, with partial matches like "Bio" would find "Introduction to Biology"
+- The application should support deleting a Course
+- The application should support inserting a new Course
+- courseNumber must be formatted as a three-digit, zero-padded integer like "033". Adding records which are not three-digit numbers results in an validation message to the user
+- The application should prevent inserting duplicate courses, where subject and number must be unique
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Addtional Information:
+- The application must be started with minimal setup using readily available libraries (e.g. `npm start` for Node.js) and sufficiently described in a README.md
+- The application must be complete and sent as a zipped package over email or a github link
+- The application will only be tested in Google Chrome
 
-## Deploy on Vercel
+Example Course records:
+1, "BIO", 101, "Introduction to Biology"
+2, "MAT", 045, "Business Statistics"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Suggestions:
+- Use an API to manage data and connect to the API from a front-end, Javascript application
+- Show that tests have been used to validate behavior
+- Runnable via Docker or Kubernetes (optional)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
